@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>1 File Game Site</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body{
+                background-color: black;
+            }
+            .bar{
+                width: 100%;
+                background-color: white;
+                min-height: 5vh;
+                z-index: 500;
+            }
+            .bar h1{
+                color: #777;
+                margin-left: 15px;
+                line-height: 5vh;
+                font-size: 25px;
+                transition: 0.75s;
+            }
+            .bar h1:hover{
+                transition: 0.75s;
+                color: #000;
+            }
+            .game-page{
+                width: 100%;
+                height: 0;
+            }
+            h1{
+                font-family: 'Trebuchet MS';
+                color: #fff;
+            }
+            img{
+                width: 150px;
+                height: 150px;
+            }
+            #game a{
+                margin-left: auto;
+                margin-right: auto;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            #game img{
+                margin-top: 25px;
+                z-index: 1;
+                border-radius: 15px;
+                margin-left: 10px;
+                border: 15px solid #444;
+                width: 128px;
+                height: 128px;
+            }
+            #gamerframer{
+                display: block;
+                z-index: 5;
+                position: absolute;
+                width: 100%;
+                height: 95%;
+                background: #666;
+            }
+            .hidden{
+                visibility: hidden;
+            }
+            #gamerframer iframe{
+                width: 85%;
+                height: 85%;
+                margin-left: auto;
+                margin-right: auto;
+                display: flex;
+                margin-top: 15px;
+                border-radius: 15px;
+                border: none;
+            }
+            #gamerframer .fortnite{
+                width: 85%;
+                height: fit-content;
+                padding: 15px 15px;
+                margin-left: auto;
+                margin-right: auto;
+                display: flex;
+                margin-top: 15px;
+                background-color: #000;
+                color: white;
+                font-family: 'Trebuchet MS';
+                border-radius: 24px;
+                box-shadow: 2px 2px rgba(0, 0, 0, 0.7);
+            }
+            #gamerframer .fortnite h1{
+                margin-left: auto;
+                margin-right: auto;
+                display: flex;
+                font-size: 15px;
+            }
+            .gamekashdf{
+                text-align: center;
+                line-height: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bar">
+            <h1>1FGS</h1>
+        </div>
+        <div class="game-page">
+            <h1 class="gamekashdf">Games!</h1>
+            <hr>
+            <div id="game" class="">
+                <a onclick="beatmebro()"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/ee/38/05/ee380566-facd-8768-333b-50dfc9e7d3ea/source/512x512bb.jpg"></img></a>
+            </div>
+        </div>
+        <div id="gamerframer" class="hidden">
+            <div class="fortnite"><a onclick="dontbeatmebro()"><span>X</span></a><h1>1v1.lol</h1></div>
+            <iframe id="yesframe" src=""></iframe>
+        </div>
+
+        <script>
+            const gamer = document.getElementById('game');
+            const yell = document.getElementById('yesframe');
+            const framer = document.getElementById('gamerframer');
+
+            function beatmebro(){
+                yell.src ="1v1lol/index.html"
+                framer.classList.remove('hidden')
+                gamer.classList.add('hidden')
+            }
+
+            function dontbeatmebro(){
+                yell.src =""
+                framer.classList.add('hidden')
+                gamer.classList.remove('hidden')
+            }
+
+        </script>
+    </body>
+</html>
